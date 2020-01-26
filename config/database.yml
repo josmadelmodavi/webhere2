@@ -10,7 +10,7 @@ default: &default
   timeout: 5000
   host: localhost
   user: 'postgres'
-  password: 'z88122894'
+  password: 'aluno-123'
   port: 5432
   database: webhere
 

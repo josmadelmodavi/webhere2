@@ -1,84 +1,91 @@
-<p id="notice"><%= notice %></p>
+<div class="mt-3">
+<div class="card mb-3">
+<div class="card-body">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @person.nome %>
-</p>
+  <p class="mb-0">
+    <strong>Nome:</strong>
+    <%= @person.nome %>
+  </p>
 
-<p>
-  <strong>Nascimento:</strong>
-  <%= @person.nascimento %>
-</p>
+  <p class="mb-0">
+    <strong>Nascimento:</strong>
+    <%= @person.nascimento %>
+  </p>
 
-<p>
-  <strong>Endereco:</strong>
-  <%= @person.endereco %>
-</p>
+  <p class="mb-0">
+    <strong>Endereco:</strong>
+    <%= @person.endereco %>
+  </p class="mb-0">
 
-<p>
-  <strong>Mae:</strong>
-  <%= @person.mae %>
-</p>
+  <p class="mb-0">
+    <strong>Mae:</strong>
+    <%= @person.mae %>
+  </p>
 
-<p>
-  <strong>Pai:</strong>
-  <%= @person.pai %>
-</p>
+  <p class="mb-0">
+    <strong>Pai:</strong>
+    <%= @person.pai %>
+  </p>
 
-<p>
-  <strong>Mora com pais:</strong>
-  <%= @person.mora_com_pais %>
-</p>
+  <p class="mb-0">
+    <strong>Mora com pais:</strong>
+    <%= @person.mora_com_pais %>
+  </p>
 
-<p>
-  <strong>Mora com quem:</strong>
-  <%= @person.mora_com_quem %>
-</p>
+  <p class="mb-0">
+    <strong>Mora com quem:</strong>
+    <%= @person.mora_com_quem %>
+  </p>
 
-<p>
-  <strong>Integrantes familia:</strong>
-  <%= @person.integrantes_familia %>
-</p>
+  <p class="mb-0">
+    <strong>Integrantes familia:</strong>
+    <%= @person.integrantes_familia %>
+  </p>
 
-<p>
-  <strong>Renda familiar:</strong>
-  <%= @person.renda_familiar %>
-</p>
+  <p class="mb-0">
+    <strong>Renda familiar:</strong>
+    <%= @person.renda_familiar %>
+  </p>
 
-<p>
-  <strong>Casa alugada:</strong>
-  <%= @person.casa_alugada %>
-</p>
+  <p class="mb-0">
+    <strong>Casa alugada:</strong>
+    <%= @person.casa_alugada %>
+  </p>
 
-<p>
-  <strong>Estuda:</strong>
-  <%= @person.estuda %>
-</p>
+  <p class="mb-0">
+    <strong>Estuda:</strong>
+    <%= @person.estuda %>
+  </p>
 
-<p>
-  <strong>Escolaridade:</strong>
-  <%= @person.escolaridade %>
-</p>
+  <p class="mb-0">
+    <strong>Escolaridade:</strong>
+    <%= @person.escolaridade %>
+  </p>
 
-<p>
-  <strong>Tempo integral:</strong>
-  <%= @person.tempo_integral %>
-</p>
+  <p class="mb-0">
+    <strong>Tempo integral:</strong>
+    <%= @person.tempo_integral %>
+  </p>
 
-<p>
-  <strong>Escola alimentacao:</strong>
-  <%= @person.escola_alimentacao %>
-</p>
+  <p class="mb-0">
+    <strong>Escola alimentacao:</strong>
+    <%= @person.escola_alimentacao %>
+  </p>
 
-<p>
-  <strong>Biblioteca:</strong>
-  <%= @person.biblioteca %>
-</p>
+  <p class="mb-0">
+    <strong>Biblioteca:</strong>
+    <%= @person.biblioteca %>
+  </p>
 
-<p>
-  <strong>Laboratorio:</strong>
-  <%= @person.laboratorio %>
-</p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+  <p class="mb-0">
+    <strong>Laboratorio:</strong>
+    <%= @person.laboratorio %>
+  </p>
+<div class="form-group">
+  <%= link_to 'Back', people_path,class: 'btn btn-warning' %>
+  <%= link_to 'Edit', edit_person_path(@person), class: 'btn btn-success' %> 
+</div>
+</div>
+</div>
+</div>

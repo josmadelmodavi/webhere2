@@ -1,4 +1,4 @@
-<%= form_with(model: person, local: true) do |form| %>
+<%= form_with(model: person, local: true,class:"card p-2") do |form| %>
   <% if person.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
@@ -11,87 +11,89 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :nome %>
-    <%= form.text_field :nome %>
+    <%= form.text_field :nome, class: 'form-control' %>
   </div>
-
-  <div class="field">
+  
+  <div class="form-group">
     <%= form.label :nascimento %>
-    <%= form.text_field :nascimento %>
+    <%= form.text_field :nascimento, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :endereco %>
-    <%= form.text_field :endereco %>
+  <div class="form-group">
+    <%= form.label :endereco, "Endereço" %>
+    <%= form.text_field :endereco, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :mae %>
-    <%= form.text_field :mae %>
+  <div class="form-group">
+    <%= form.label :mae, "Mãe" %>
+    <%= form.text_field :mae, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :pai %>
-    <%= form.text_field :pai %>
+    <%= form.text_field :pai, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :mora_com_pais %>
-    <%= form.check_box :mora_com_pais %>
+  <div class="custom-control custom-checkbox">
+    <%= form.label :mora_com_pais,class: 'custom-control-label' %>
+    <%= form.check_box :mora_com_pais, class: 'custom-control-input' %>
   </div>
 
-  <div class="field">
-    <%= form.label :mora_com_quem %>
-    <%= form.text_field :mora_com_quem %>
+  <div class="form-group">
+    <%= form.label :mora_com_quem, "Mora com quem?" %>
+    <%= form.text_field :mora_com_quem, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :integrantes_familia %>
-    <%= form.number_field :integrantes_familia %>
+  <div class="form-group">
+    <%= form.label :integrantes_familia, "Integrantes da Familia" %>
+    <%= form.number_field :integrantes_familia, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :renda_familiar %>
-    <%= form.text_field :renda_familiar %>
+    <%= form.text_field :renda_familiar, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :casa_alugada %>
-    <%= form.check_box :casa_alugada %>
+  <div class="custom-control custom-checkbox">
+    <%= form.label :casa_alugada,class: 'custom-control-label' %>
+    <%= form.check_box :casa_alugada, class: 'custom-control-input' %>
   </div>
 
-  <div class="field">
-    <%= form.label :estuda %>
-    <%= form.check_box :estuda %>
+  <div class="custom-control custom-checkbox">
+    <%= form.label :estuda,class: 'custom-control-label' %>
+    <%= form.check_box :estuda, class: 'custom-control-input' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :escolaridade %>
-    <%= form.text_field :escolaridade %>
+    <%= form.text_field :escolaridade, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :tempo_integral %>
-    <%= form.check_box :tempo_integral %>
+
+  <div class="custom-control custom-checkbox">
+    <%= form.label :tempo_integral,class: 'custom-control-label' %>
+    <%= form.check_box :tempo_integral, class: 'custom-control-input',type: 'checkbox' %>
   </div>
 
-  <div class="field">
-    <%= form.label :escola_alimentacao %>
-    <%= form.check_box :escola_alimentacao %>
+  <div class="custom-control custom-checkbox">
+    <%= form.label :escola_alimentacao,class: 'custom-control-label' %>
+    <%= form.check_box :escola_alimentacao, class: 'custom-control-input' %>
   </div>
 
-  <div class="field">
-    <%= form.label :biblioteca %>
-    <%= form.check_box :biblioteca %>
+  <div class="custom-control custom-checkbox">
+    <%= form.label :biblioteca,class: 'custom-control-label' %>
+    <%= form.check_box :biblioteca, class: 'custom-control-input' %>
   </div>
 
-  <div class="field">
-    <%= form.label :laboratorio %>
-    <%= form.check_box :laboratorio %>
+  <div class="custom-control custom-checkbox">
+    <%= form.label :laboratorio,class: 'custom-control-label' %>
+    <%= form.check_box :laboratorio, class: 'custom-control-input' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= link_to 'Voltar', people_path, class: 'btn btn-warning mb-3' %>
+    <%= form.submit "Gravar", class: 'btn btn-success mb-3' %>
   </div>
 <% end %>

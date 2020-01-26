@@ -1,57 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<h1>People</h1>
+<nav class="navbar navbar-light bg-light ">
+  <a class="navbar-brand" href="#">Lista de cadsatrados</a>
+</nav>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Nascimento</th>
-      <th>Endereco</th>
-      <th>Mae</th>
-      <th>Pai</th>
-      <th>Mora com pais</th>
-      <th>Mora com quem</th>
-      <th>Integrantes familia</th>
-      <th>Renda familiar</th>
-      <th>Casa alugada</th>
-      <th>Estuda</th>
-      <th>Escolaridade</th>
-      <th>Tempo integral</th>
-      <th>Escola alimentacao</th>
-      <th>Biblioteca</th>
-      <th>Laboratorio</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @people.each do |person| %>
+<section class="container">
+  <div class="mb-3">
+  <%= link_to 'Novo Cadastro', new_person_path,class: "btn btn-success" %>
+  </div>
+
+  <table class="table" id="tbl">
+    <thead class="thead-light">
       <tr>
-        <td><%= person.nome %></td>
-        <td><%= person.nascimento %></td>
-        <td><%= person.endereco %></td>
-        <td><%= person.mae %></td>
-        <td><%= person.pai %></td>
-        <td><%= person.mora_com_pais %></td>
-        <td><%= person.mora_com_quem %></td>
-        <td><%= person.integrantes_familia %></td>
-        <td><%= person.renda_familiar %></td>
-        <td><%= person.casa_alugada %></td>
-        <td><%= person.estuda %></td>
-        <td><%= person.escolaridade %></td>
-        <td><%= person.tempo_integral %></td>
-        <td><%= person.escola_alimentacao %></td>
-        <td><%= person.biblioteca %></td>
-        <td><%= person.laboratorio %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nome</th>
+        <th>Nascimento</th>
+        <th>Endereco</th>
+        <th>Mae</th>
+        <th>Escolaridade</th>
+        <th colspan="3" width="20%">Funções</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @people.each do |person| %>
+        <tr>
+          <td><%= person.nome %></td>
+          <td><%= person.nascimento %></td>
+          <td><%= person.endereco %></td>
+          <td><%= person.mae %></td>
+          <td><%= person.escolaridade %></td>
+          <td><%= link_to 'Exibir', person, class: 'btn btn-sm btn-primary' %></td>
+          <td><%= link_to 'Editar', edit_person_path(person), class: 'btn btn-sm btn-success' %></td>
+          <td><%= link_to 'Deletar', person, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
+
 
 <br>
-
-<%= link_to 'New Person', new_person_path %>
