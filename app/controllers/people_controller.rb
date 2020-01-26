@@ -5,6 +5,9 @@ class PeopleController < ApplicationController
   # GET /people.json
   def index
     @people = Person.all
+    if params[:q]
+      @people = Person.all.where("nome like ?", '%' + params[:q] + '%')
+    end
   end
 
   # GET /people/1
