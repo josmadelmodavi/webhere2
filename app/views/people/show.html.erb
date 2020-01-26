@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @person.nome %>
+</p>
+
+<p>
+  <strong>Nascimento:</strong>
+  <%= @person.nascimento %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @person.endereco %>
+</p>
+
+<p>
+  <strong>Mae:</strong>
+  <%= @person.mae %>
+</p>
+
+<p>
+  <strong>Pai:</strong>
+  <%= @person.pai %>
+</p>
+
+<p>
+  <strong>Mora com pais:</strong>
+  <%= @person.mora_com_pais %>
+</p>
+
+<p>
+  <strong>Mora com quem:</strong>
+  <%= @person.mora_com_quem %>
+</p>
+
+<p>
+  <strong>Integrantes familia:</strong>
+  <%= @person.integrantes_familia %>
+</p>
+
+<p>
+  <strong>Renda familiar:</strong>
+  <%= @person.renda_familiar %>
+</p>
+
+<p>
+  <strong>Casa alugada:</strong>
+  <%= @person.casa_alugada %>
+</p>
+
+<p>
+  <strong>Estuda:</strong>
+  <%= @person.estuda %>
+</p>
+
+<p>
+  <strong>Escolaridade:</strong>
+  <%= @person.escolaridade %>
+</p>
+
+<p>
+  <strong>Tempo integral:</strong>
+  <%= @person.tempo_integral %>
+</p>
+
+<p>
+  <strong>Escola alimentacao:</strong>
+  <%= @person.escola_alimentacao %>
+</p>
+
+<p>
+  <strong>Biblioteca:</strong>
+  <%= @person.biblioteca %>
+</p>
+
+<p>
+  <strong>Laboratorio:</strong>
+  <%= @person.laboratorio %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>

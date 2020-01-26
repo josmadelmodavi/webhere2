@@ -1,0 +1,97 @@
+<%= form_with(model: person, local: true) do |form| %>
+  <% if person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+      <% person.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nascimento %>
+    <%= form.text_field :nascimento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mae %>
+    <%= form.text_field :mae %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pai %>
+    <%= form.text_field :pai %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mora_com_pais %>
+    <%= form.check_box :mora_com_pais %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mora_com_quem %>
+    <%= form.text_field :mora_com_quem %>
+  </div>
+
+  <div class="field">
+    <%= form.label :integrantes_familia %>
+    <%= form.number_field :integrantes_familia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :renda_familiar %>
+    <%= form.text_field :renda_familiar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :casa_alugada %>
+    <%= form.check_box :casa_alugada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estuda %>
+    <%= form.check_box :estuda %>
+  </div>
+
+  <div class="field">
+    <%= form.label :escolaridade %>
+    <%= form.text_field :escolaridade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tempo_integral %>
+    <%= form.check_box :tempo_integral %>
+  </div>
+
+  <div class="field">
+    <%= form.label :escola_alimentacao %>
+    <%= form.check_box :escola_alimentacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :biblioteca %>
+    <%= form.check_box :biblioteca %>
+  </div>
+
+  <div class="field">
+    <%= form.label :laboratorio %>
+    <%= form.check_box :laboratorio %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
