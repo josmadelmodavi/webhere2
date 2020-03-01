@@ -1,7 +1,11 @@
 <div class="mt-3">
 <div class="card mb-3">
 <div class="card-body">
-  <p id="notice"><%= notice %></p>
+  <% if notice %>
+    <div id="notice" class="alert alert-success" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
 
   <p class="mb-0">
     <strong>Nome:</strong>
